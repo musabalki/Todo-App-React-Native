@@ -17,16 +17,22 @@ const App = () => {
   const renderItem = ({ item }) => {
     return <Text onPress={() => updateTextItem(item)} style={{ margin: 10, flex: 1, backgroundColor: item.durum == 0 ? "#7ca453" : "gray", borderRadius: 10, padding: 20, color: item.durum == 1 ? "white" : "white", textDecorationLine: item.durum == 1 ? "line-through" : "none" }}>{item.value}</Text>
   }
-
+  const todoCount = () => {
+    return todo.filter(todoItem => {
+      if (todoItem.durum == 0) {
+        return todoItem
+      }
+    }).length
+  }
   return (<SafeAreaView style={styles.container}>
     <View style={styles.todoTopArea}>
       <Text style={styles.todoText}>
         Yapılacaklar
       </Text>
       <Text style={styles.todoCounter}>
-        {todo.length}
+        {todo && todoCount()}
       </Text>
-    </View>d
+    </View>
     <FlatList
       data={todo}
       renderItem={renderItem}
