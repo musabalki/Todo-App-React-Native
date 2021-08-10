@@ -42,7 +42,7 @@ const App = () => {
       <TextInput value={value} onChangeText={text => setValue(text)} placeholder="something" placeholderTextColor="white" style={styles.inp} placeholder="Yapılacak..." />
       <TouchableOpacity onPress={() => onChangeText()}
         style={{ backgroundColor: 'gray', borderRadius: 10 }}>
-        <Text style={{ color: "white", textAlign: "center", padding: 10 }} on>Press Here</Text>
+        <Text style={{ color: "white", textAlign: "center", padding: 10 }} on>Kaydet</Text>
       </TouchableOpacity>
     </View>
   </SafeAreaView>
