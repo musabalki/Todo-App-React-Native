@@ -1,3 +1,3 @@
 # Todo App React Native
 
-<img src="ReactNativeTodo.png" width="400">
+<img src="react-native-todo.png" width="400">
